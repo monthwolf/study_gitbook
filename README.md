@@ -1,7 +1,5 @@
 # Day1-Springboot项目初始化与配置
 
-apiapi项目框架配置
-
 在本项目中使用的开发环境：
 
 * _JDK 1.8 版本_（此版本是目前企业中使用最广泛的）;
@@ -41,7 +39,7 @@ apiapi项目框架配置
 * ⑥：选择前面小节中已经安装好的 JDK 1.8 版本；
 * ⑦：选择 Java 版本，和 JDK 版本保持一致，选择 8；
 
-> \==注意：==IDEA 通过 Spring Initializr 来创建 Spring Boot 项目，新版本不支持勾选 Java 8 了 ， 可以将初始化链接换成阿里云的 `http://start.aliyun.com`, 就可以正常选择 Java 8 了：
+> <mark style="color:blue;">注意：</mark>IDEA 通过 Spring Initializr 来创建 Spring Boot 项目，新版本不支持勾选 Java 8 了 ， 可以将初始化链接换成阿里云的 `http://start.aliyun.com`, 就可以正常选择 Java 8 了：
 
 按照以上步骤初始化`weblog-springboot`文件夹后，再建立子模块`weblog-web`、`weblog-module-common`、`weblog-module-admin`，删除其中的无用文件夹，得到如下文件结构：
 
@@ -392,10 +390,11 @@ public @interface ApiOperationLog {
 
 ```
 
-* `@Retention(RetentionPolicy.RUNTIME)`： 这个元注解用于指定注解的保留策略，即注解在何时生效。`RetentionPolicy.RUNTIME` 表示该注解将==在运行时保留==。
-* `@Target({ElementType.METHOD})`： 这个元注解用于指定注解的目标元素，即可以在哪些地方使用这个注解。`ElementType.METHOD` 表示==该注解只能用于方法上==。
-* `@Documented`：使用 `@Documented`，表示==在生成文档时，被注解的元素及其注解信息会被包含在文档中==。
-*
+* `@Retention(RetentionPolicy.RUNTIME)`： 这个元注解用于指定注解的保留策略，即注解在何时生效。`RetentionPolicy.RUNTIME` 表示该注解将<mark style="color:blue;">在运行时保留</mark>。
+* `@Target({ElementType.METHOD})`： 这个元注解用于指定注解的目标元素，即可以在哪些地方使用这个注解。`ElementType.METHOD` 表示<mark style="color:blue;">该注解只能用于方法上</mark>。
+* `@Documented`：使用 `@Documented`，表示<mark style="color:blue;">在生成文档时，被注解的元素及其注解信息会被包含在文档中</mark>。
+
+
 
 ### 什么是AOP
 
@@ -411,16 +410,16 @@ AOP（Aspect-Oriented Programming，面向切面编程）是一个编程范式�
 
 `aspectj` 相关注解的作用：
 
-* **@Aspect**：声明==该类为一个切面类==；
-* **@Pointcut**：定义一个切点，后面跟随一个表达式，表达式==可以定义为切某个注解，也可以切某个 package 下的方法==；
+* **@Aspect**：声明<mark style="color:blue;">该类为一个切面类</mark>；
+* **@Pointcut**：定义一个切点，后面跟随一个表达式，表达式<mark style="color:blue;">可以定义为切某个注解，也可以切某个 package 下的方法</mark>；
 
 切点定义好后，就是围绕这个切点做文章了：
 
-* **@Before**: 在==切点之前，织入相关代码==；
-* **@After**: 在==切点之后，织入相关代码==;
-* **@AfterReturning**: 在==切点返回内容后，织入相关代码==，一般用于对返回值做些加工处理的场景；
-* **@AfterThrowing**: 用来处理==当织入的代码抛出异常后的逻辑处理==;
-* **@Around**: 环绕，可以在==切入点前后织入代码==，并且可以自由的控制何时执行切点；
+* **@Before**: 在<mark style="color:blue;">切点之前，织入相关代码</mark>；
+* **@After**: 在<mark style="color:blue;">切点之后，织入相关代码</mark>;
+* **@AfterReturning**: 在<mark style="color:blue;">切点返回内容后，织入相关代码</mark>，一般用于对返回值做些加工处理的场景；
+* **@AfterThrowing**: 用来处理<mark style="color:blue;">当织入的代码抛出异常后的逻辑处理</mark>;
+* **@Around**: 环绕，可以在<mark style="color:blue;">切入点前后织入代码</mark>，并且可以自由的控制何时执行切点；
 
 ### Pointcut的基本概念和用法
 
