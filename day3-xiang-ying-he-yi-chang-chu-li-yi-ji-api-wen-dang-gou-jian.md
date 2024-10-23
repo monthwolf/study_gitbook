@@ -24,7 +24,7 @@
 ```json
 {
 	"success": false,
-	"errorCode": "10000"
+	"errorCode": "10000",
 	"message": "用户名不能为空"
 }
 ```

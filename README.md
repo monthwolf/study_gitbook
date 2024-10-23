@@ -717,7 +717,7 @@ public class WeblogWebApplication {
 
 #### 环境划分
 
-如上面文件结构，在`weblog-web` 的`resoureces`文件下创建`application.yml`配置文件，`application.yml`中定义选择的环境
+如上面文件结构，在`weblog-web` 的`resources`文件下创建`application.yml`配置文件，`application.yml`中定义选择的环境
 
 ```yml
 spring:
